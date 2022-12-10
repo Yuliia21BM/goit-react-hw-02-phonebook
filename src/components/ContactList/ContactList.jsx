@@ -1,4 +1,9 @@
-import { ContactsList, ContactItem, DeleteBtn } from './ContactList.styled';
+import {
+  ContactsList,
+  ContactItem,
+  DeleteBtn,
+  ContactName,
+} from './ContactList.styled';
 
 export const ContactList = ({ visibleContacts, onDeleteContact }) => {
   return (
@@ -7,7 +12,9 @@ export const ContactList = ({ visibleContacts, onDeleteContact }) => {
         return (
           <ContactItem key={id}>
             <span>&#128241;</span>
-            {name} : {number}
+            <div>
+              <ContactName>{name}</ContactName> : {number}
+            </div>
             <DeleteBtn onClick={() => onDeleteContact(id)}>Delete</DeleteBtn>
           </ContactItem>
         );

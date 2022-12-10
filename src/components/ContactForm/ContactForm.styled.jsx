@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Form, Field } from 'formik';
 
-export const Form = styled.form`
+export const ContactsForm = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,7 +16,7 @@ export const ForlLabel = styled.label`
   font-weight: 500;
 `;
 
-export const FormInput = styled.input`
+export const FormInput = styled(Field)`
   width: 100%;
 `;
 
